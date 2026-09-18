@@ -104,7 +104,7 @@ const PRESETS = [
 ];
 
 export default function App() {
-  const [apiUrl, setApiUrl] = useState('http://localhost:8000');
+  const [apiUrl, setApiUrl] = useState('https://salary-prediction-api-rv5j.onrender.com');
   const [isApiOnline, setIsApiOnline] = useState(false);
   const [formData, setFormData] = useState({
     job_role: 'Software Engineer',
@@ -184,7 +184,7 @@ export default function App() {
     } catch (err) {
       setError(
         err.message ||
-          'Failed to connect to the backend server. Make sure uvicorn is running on port 8000.'
+        'Failed to connect to the backend server. Make sure uvicorn is running on port 8000.'
       );
     } finally {
       setLoading(false);
